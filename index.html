@@ -7,7 +7,7 @@
 <style>
   :root{
     --bg:#f4efe7; --card:#fffdf9; --ink:#2c2620; --muted:#7a6f60;
-    --teak:#a9683a; --teak-dark:#8a5430; --line:#e4dccd; --good:#3f7d4f; --warn:#b8862f;
+    --teak:#a9683a; --teak-dark:#8a5430; --line:#e4dccd; --good:#3f7d4f; --warn:#b8862f; --star:#c9962b;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--bg);color:var(--ink);
@@ -35,7 +35,10 @@
   .rank.value{background:var(--good)}
   .card h3{margin:0 0 6px;font-size:19px;letter-spacing:-.01em}
   .price{font-size:20px;font-weight:700;color:var(--teak-dark)}
-  .meta{font-size:14px;color:var(--muted);margin:8px 0 0}
+  .stars{margin:8px 0 2px;font-size:18px;color:var(--star);letter-spacing:1px;line-height:1}
+  .stars .num{font-size:13px;color:var(--muted);font-weight:600;letter-spacing:0;margin-left:6px}
+  .rateby{font-size:13px;color:var(--muted);margin:2px 0 0;font-style:italic}
+  .meta{font-size:14px;color:var(--muted);margin:10px 0 0}
   .meta b{color:var(--ink);font-weight:600}
   .flag{margin-top:10px;font-size:13.5px;padding:8px 10px;border-radius:8px;background:#f3f7f1;
     border:1px solid #d8e6d8;color:var(--good)}
@@ -44,7 +47,6 @@
     font-weight:600;font-size:14.5px;padding:10px 18px;border-radius:9px}
   .btn:hover{background:var(--teak-dark)}
   footer{margin-top:40px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
-  a.plain{color:var(--teak-dark)}
 </style>
 </head>
 <body>
@@ -53,7 +55,7 @@
     <h1>461 Anderson — Dining Table Watch</h1>
     <p class="sub">Mid-century modern · extendable to seat 8 · Danish teak/walnut preferred · driveable from the Bay Area</p>
     <span class="updated">Updated June 10, 2026</span>
-    <p class="criteria">Budget $1,000–$2,000 · current in-budget, verified-active picks only</p>
+    <p class="criteria">Budget $1,000–$2,000 · current in-budget, verified-active picks only · ★ value = price vs. quality</p>
   </header>
 
   <div class="alert">
@@ -73,6 +75,8 @@
       <span class="rank">🥇 Cleanest pick</span>
       <h3>Refinished MCM Teak Rectangular — Made in Denmark</h3>
       <div class="price">$1,995</div>
+      <div class="stars">★★★★☆<span class="num">4.0 / 5 value</span></div>
+      <p class="rateby">Fully verified, refinished like-new, four legs, 90"+ — but priced at the very top of budget, so it's a fair price rather than a steal.</p>
       <p class="meta"><b>Maker/origin:</b> Made in Denmark (@stuffbyluxe refinisher) · San Francisco<br>
       <b>Size:</b> 51" → ~90.5" extended on two matching-wood leaves (seats 8)<br>
       <b>Base:</b> four tapered legs · <b>Condition:</b> refinished, like-new · solid/veneer teak</p>
@@ -82,11 +86,13 @@
   </div>
 
   <div class="card">
-    <img class="photo" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.84726-6/713784154_1473081470708390_1126444361681016328_n.jpg?stp=c0.87.526.526a_dst-jpg_p526x395_tt6&_nc_cat=105&ccb=1-7&_nc_sid=92e707&_nc_ohc=VgSoVgGNQgQQ7kNvwGqScbX&_nc_oc=AdoqyWrD9SjDHQS6P5SWvk7_kvDHbVb9nUN8H1aBClJVDyLJJ7-R8yvfmxgyQfAEpsFzjMeeQXnc17jeDGRuhkz7&_nc_zt=14&_nc_ht=scontent-sjc3-1.xx&_nc_gid=uRw9xB0Is3B81DjRTgkbpQ&_nc_ss=7b2a8&oh=00_Af8mLMpBnpk1GzknTGfvhQEm9QNYHCk4TmNHgFAuUApEdg&oe=6A2EB684" alt="Dyrlund rosewood extendable dining table top">
+    <img class="photo" src="https://scontent-sjc3-1.xx.fbcdn.net/v/t39.84726-6/710755376_1364168475646942_5873495011154770896_n.jpg?stp=dst-jpg_p720x720_tt6&_nc_cat=106&ccb=1-7&_nc_sid=92e707&_nc_ohc=N0e1UvnxcgEQ7kNvwGCHwWD&_nc_oc=AdqzO9hf2the2Knzd-gvYZQklMPOAC4iCx-gHWKyr-ukg8HrYgSl-nP06mk5K2ZURUk1RQw25kCc9WhAyOEVfhW9&_nc_zt=14&_nc_ht=scontent-sjc3-1.xx&_nc_gid=gK4qluV75KakLmmBAVcmnQ&_nc_ss=7b2a8&oh=00_Af8ydg6bHN4iRGn1tJzmAmDXQf-9VjDIYFFwt8ptgc9zZg&oe=6A2EB4E8" alt="Dyrlund rosewood extendable dining table">
     <div class="body">
       <span class="rank value">💰 Best value</span>
       <h3>Dyrlund Rosewood Extendable</h3>
       <div class="price">$1,000</div>
+      <div class="stars">★★★★½<span class="num">4.5 / 5 value</span></div>
+      <p class="rateby">Priority Danish maker, rosewood, 104" (seats 10) at half the budget — exceptional on paper; only the unconfirmed base keeps it from a 5.</p>
       <p class="meta"><b>Maker/origin:</b> Dyrlund, Made in Denmark (priority maker) · Los Altos<br>
       <b>Size:</b> 64" → 104" extended (two 20" leaves, seats 10)<br>
       <b>Condition:</b> good — 2 small water-stain spots · rosewood top</p>
