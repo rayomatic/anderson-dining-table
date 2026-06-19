@@ -19,13 +19,17 @@
   .updated{display:inline-block;margin-top:10px;font-size:13px;color:var(--teak-dark);
     background:#fff;border:1px solid var(--line);border-radius:999px;padding:4px 12px;font-weight:600}
   .criteria{font-size:13px;color:var(--muted);margin:14px 0 0}
-  .alert{margin:22px 0 8px;background:#fff8ea;border:1px solid #f0dca8;border-left:4px solid var(--warn);
+  .tabs{display:flex;gap:8px;margin:22px 0 4px}
+  .tab{flex:0 0 auto;font-size:15px;font-weight:600;color:var(--muted);background:#fff;
+    border:1px solid var(--line);border-radius:999px;padding:8px 20px;cursor:pointer}
+  .tab.active{background:var(--teak);color:#fff;border-color:var(--teak)}
+  .alert{margin:18px 0 8px;background:#fff8ea;border:1px solid #f0dca8;border-left:4px solid var(--warn);
     border-radius:10px;padding:14px 16px}
   .alert h2{font-size:14px;text-transform:uppercase;letter-spacing:.06em;margin:0 0 8px;color:var(--warn)}
   .alert ul{margin:0;padding-left:18px;font-size:14.5px}
   .alert li{margin:4px 0}
   h2.section{font-size:13px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);
-    margin:34px 0 14px;border-bottom:1px solid var(--line);padding-bottom:8px}
+    margin:24px 0 14px;border-bottom:1px solid var(--line);padding-bottom:8px}
   .card{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden;
     margin:0 0 22px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
   .card .photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;background:#eadfce}
@@ -48,6 +52,8 @@
   .btn:hover{background:var(--teak-dark)}
   .note{font-size:13px;color:var(--muted);background:#fff;border:1px solid var(--line);
     border-radius:10px;padding:12px 14px;margin:0 0 8px}
+  .pane{display:none}
+  .pane.active{display:block}
   footer{margin-top:40px;font-size:12px;color:var(--muted);text-align:center;line-height:1.7}
 </style>
 </head>
@@ -56,78 +62,149 @@
   <header>
     <h1>461 Anderson — Dining Table Watch</h1>
     <p class="sub">Mid-century modern · extendable to seat 8 · Danish teak/walnut preferred · driveable from the Bay Area</p>
-    <span class="updated">Updated June 18, 2026</span>
-    <p class="criteria">Budget $1,000–$2,000 · current in-budget, verified-active picks only · ★ value = price vs. quality</p>
+    <span class="updated">Updated June 19, 2026</span>
+    <p class="criteria">Current, click-verified, in-budget picks only · ★ value = price vs. quality</p>
   </header>
 
-  <div class="alert">
-    <h2>⚡ Look at right away</h2>
-    <ul>
-      <li><b>Best value — message today:</b> the <b>Ansager Møbler teak draw-leaf + 4 D-Scan teak chairs, $1,200</b> in Santa Rosa is still <b>in stock</b>. Priority Danish maker (stamped #3205, Made in Denmark), four tapered legs confirmed in photos, extends 53"→92" (seats 10). With four teak chairs included, the table itself effectively lands near $400–$800 — the strongest value on the board.</li>
-      <li><b>J.L. Møller base now confirmed:</b> the long-standing caveat is resolved — this run the listing's hero photo clearly shows <b>four tapered legs</b> (not a pedestal) on the $1,750 rosewood draw-leaf. It now clears every rule.</li>
-      <li><b>All three picks below are click-verified active with four-leg bases confirmed this run</b>, and photos load directly (Facebook images are self-hosted so they won't expire).</li>
-      <li><b>Above budget (noted, not shown):</b> a Skovmand &amp; Andersen teak w/ 3 leaves at <b>$2,500</b> (FB, SF), a refinished Skovby teak at <b>$2,650</b> (CL), and a Gudme Møbelfabrik walnut at <b>$3,450</b> (CL) — all priority makers but over the $2,000 ceiling.</li>
-    </ul>
+  <div class="tabs">
+    <button class="tab active" data-pane="tables">Tables</button>
+    <button class="tab" data-pane="chairs">Chairs</button>
   </div>
 
-  <h2 class="section">Current top picks · in budget</h2>
+  <!-- ===================== TABLES ===================== -->
+  <div class="pane active" id="tables">
 
-  <div class="card">
-    <img class="photo" src="https://images.craigslist.org/01515_aNwUbig0hmh_0bC0fu_600x450.jpg" alt="J.L. Møller rosewood extendable mid-century dining table">
-    <div class="body">
-      <span class="rank">🥇 Top pick</span>
-      <h3>J.L. Møller Rosewood Draw-Leaf Dining Table — Made in Denmark</h3>
-      <div class="price">$1,750</div>
-      <div class="stars">★★★★½<span class="num">4.5 / 5 value</span></div>
-      <p class="rateby">Priority Danish maker, restored Brazilian rosewood, extends to nearly 105" and sits well under the $2,000 ceiling — a premium, generations-lasting piece for the money.</p>
-      <p class="meta"><b>Maker/origin:</b> J.L. Møller (priority maker), Made in Denmark · Sunset / Parkside, San Francisco<br>
-      <b>Size:</b> 59" → 104.75" extended on two self-storing matching-rosewood draw-leaves (seats 8–10) · 39.25" deep<br>
-      <b>Base:</b> four tapered legs — <b>confirmed in listing photo this run</b> · <b>Condition:</b> excellent, restored · solid/veneer rosewood</p>
-      <div class="flag">✓ Clears every rule: priority Danish maker, restored rosewood, matching-rosewood draw-leaves (not metal), four legs (not pedestal/trestle) confirmed in the hero photo, extends well past 84", in budget, and active (posted Jun 12, expires Jul 12).</div>
-      <a class="btn" href="https://sfbay.craigslist.org/sfc/fuo/d/san-francisco-mid-century-modern/7940564525.html" target="_blank" rel="noopener">View listing →</a>
+    <div class="alert">
+      <h2>⚡ Look at right away</h2>
+      <ul>
+        <li><b>Links now point to Facebook.</b> The J.L. Møller rosewood is the same @moon.modern listing you spotted on FB — the Craigslist crosspost was flaky, so the link below now goes straight to the Facebook listing. All three table links are Facebook.</li>
+        <li><b>Best value — message today:</b> the <b>Ansager Møbler teak draw-leaf + 4 D-Scan chairs, $1,200</b> (Santa Rosa) is still <b>in stock</b>. Priority maker, four legs confirmed, extends 53"→92". Note: the matching <b>set of 6 D-Scan chairs</b> on the Chairs tab is the same line as these chairs.</li>
+        <li><b>All three picks are click-verified active with four-leg bases confirmed</b>, and every photo is self-hosted so nothing expires.</li>
+        <li><b>Above budget (noted, not shown):</b> Skovmand &amp; Andersen teak $2,500, Skovby teak $2,650, Gudme walnut $3,450 — priority makers, over the $2,000 ceiling.</li>
+      </ul>
+    </div>
+
+    <p class="criteria">Budget $1,000–$2,000 · extends to ≥84" · Danish teak/walnut/rosewood · four legs (no pedestal/trestle)</p>
+    <h2 class="section">Tables · in budget</h2>
+
+    <div class="card">
+      <img class="photo" src="img/jlmoller.jpg" alt="J.L. Møller rosewood extendable mid-century dining table, four legs">
+      <div class="body">
+        <span class="rank">🥇 Top pick</span>
+        <h3>J.L. Møller Rosewood Draw-Leaf Dining Table — Made in Denmark</h3>
+        <div class="price">$1,750</div>
+        <div class="stars">★★★★½<span class="num">4.5 / 5 value</span></div>
+        <p class="rateby">Priority Danish maker, restored Brazilian rosewood, extends to nearly 105" and sits well under the $2,000 ceiling — a premium, generations-lasting piece for the money.</p>
+        <p class="meta"><b>Maker/origin:</b> J.L. Møller (priority maker), Made in Denmark · San Francisco (@moon.modern)<br>
+        <b>Size:</b> 59" → 104.75" extended on two self-storing matching-rosewood draw-leaves (seats 8–10) · 39.25" deep<br>
+        <b>Base:</b> four tapered legs — <b>confirmed in listing photos</b> · <b>Condition:</b> used – good, restored · rosewood</p>
+        <div class="flag">✓ Clears every rule: priority Danish maker, restored rosewood, matching-rosewood draw-leaves (not metal), four legs (not pedestal/trestle), extends past 84", in budget, and active on Facebook (listed ~6 days ago).</div>
+        <a class="btn" href="https://www.facebook.com/marketplace/item/2156729918516180/" target="_blank" rel="noopener">View listing →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="photo" src="img/ansager.jpg" alt="Ansager Møbler teak draw-leaf dining table with D-Scan teak chair">
+      <div class="body">
+        <span class="rank value">💚 Best value</span>
+        <h3>Ansager Møbler Teak Draw-Leaf Table + 4 D-Scan Teak Chairs — Made in Denmark</h3>
+        <div class="price">$1,200 <span style="font-size:13px;color:var(--muted);font-weight:600">(table + 4 chairs)</span></div>
+        <div class="stars">★★★★★<span class="num">5 / 5 value</span></div>
+        <p class="rateby">Priority Danish maker, four-leg base confirmed, and four teak chairs bundled in — netting the table itself to roughly $400–$800. The best price-to-quality on the board.</p>
+        <p class="meta"><b>Maker/origin:</b> Ansager Møbler (priority maker), stamped #3205, Made in Denmark · Santa Rosa<br>
+        <b>Size:</b> 53" → 92" extended on two self-storing matching-teak draw-leaves (seats up to 10) · 35" deep<br>
+        <b>Base:</b> four tapered teak legs (removable) — <b>confirmed</b> · <b>Condition:</b> used – good; chairs solid teak, original upholstered seats/backs</p>
+        <div class="flag">✓ Clears every rule: priority maker, solid teak, matching-wood draw-leaves, four legs, extends past 84", in budget for the table alone — four chairs as a bonus. In stock this run.</div>
+        <a class="btn" href="https://www.facebook.com/marketplace/item/811777308535929/" target="_blank" rel="noopener">View listing →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="photo" src="img/teak1499.jpg" alt="Refinished Danish modern teak expandable draw-leaf dining table, four legs">
+      <div class="body">
+        <span class="rank">🥈 Runner-up</span>
+        <h3>Danish Modern Teak Expandable Dining Table (Refinished)</h3>
+        <div class="price">$1,499</div>
+        <div class="stars">★★★★<span class="num">4 / 5 value</span></div>
+        <p class="rateby">Clean refinished teak with a matching draw-leaf, extends to 94". A dealer piece (Enliven) — fairly priced and in budget, just without a named priority maker.</p>
+        <p class="meta"><b>Maker/origin:</b> Danish (unbranded), via Enliven · San Francisco<br>
+        <b>Size:</b> 53" → 94" extended on matching-teak draw-leaves (seats 8) · 33" deep<br>
+        <b>Base:</b> four tapered legs — <b>confirmed in listing photo</b> · <b>Condition:</b> used – good, recently refinished</p>
+        <div class="flag">✓ Clears every rule: Danish teak, matching-wood draw-leaves, four legs, extends past 84", in budget, and active on Facebook (listed ~1 day ago).</div>
+        <a class="btn" href="https://www.facebook.com/marketplace/item/1319262477065144/" target="_blank" rel="noopener">View listing →</a>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Seen this run but ruled out:</b> Lauritz M. Larsen teak ($1,500, SF) — <b>trestle base</b>. Stuff by Luxe oval ($1,995, SF) — <b>twin pedestal base</b>. Mobler sets w/ chairs ($1,500, San Jose) and a Danish teak table ($700, Sacramento) — only ~67" extended, too small. McIntosh of Kirkcaldy butterfly-leaf ($1,850, SF) — <b>UK import</b>, 81" max. A $900 MM Moreddi round (Martinez) — extends to 87" but marked <b>Pending</b>.
     </div>
   </div>
 
-  <div class="card">
-    <img class="photo" src="img/ansager.jpg" alt="Ansager Møbler teak draw-leaf dining table with D-Scan teak chair">
-    <div class="body">
-      <span class="rank value">💚 Best value</span>
-      <h3>Ansager Møbler Teak Draw-Leaf Table + 4 D-Scan Teak Chairs — Made in Denmark</h3>
-      <div class="price">$1,200 <span style="font-size:13px;color:var(--muted);font-weight:600">(table + 4 chairs)</span></div>
-      <div class="stars">★★★★★<span class="num">5 / 5 value</span></div>
-      <p class="rateby">Priority Danish maker, four-leg base confirmed in photos, and four teak chairs bundled in — netting the table itself to roughly $400–$800. The best price-to-quality on the board.</p>
-      <p class="meta"><b>Maker/origin:</b> Ansager Møbler (priority maker), stamped #3205, Made in Denmark · Santa Rosa<br>
-      <b>Size:</b> 53" → 92" extended on two self-storing matching-teak draw-leaves (seats up to 10) · 35" deep<br>
-      <b>Base:</b> four tapered teak legs (removable) — <b>confirmed in listing photos</b> · <b>Condition:</b> good vintage; chairs solid teak with original upholstered seats/backs</p>
-      <div class="flag">✓ Clears every rule: priority Danish maker, solid teak, draw-leaf with matching-wood leaves, four legs (not pedestal/trestle), extends well past 84", and in budget for the table alone — with four chairs as a bonus. In stock as of this run.</div>
-      <a class="btn" href="https://www.facebook.com/marketplace/item/811777308535929/" target="_blank" rel="noopener">View listing →</a>
-    </div>
-  </div>
+  <!-- ===================== CHAIRS ===================== -->
+  <div class="pane" id="chairs">
 
-  <div class="card">
-    <img class="photo" src="img/teak1499.jpg" alt="Refinished Danish modern teak expandable draw-leaf dining table">
-    <div class="body">
-      <span class="rank">🥈 Runner-up</span>
-      <h3>Danish Modern Teak Expandable Dining Table (Refinished)</h3>
-      <div class="price">$1,499</div>
-      <div class="stars">★★★★<span class="num">4 / 5 value</span></div>
-      <p class="rateby">Clean refinished teak with a matching draw-leaf, extends to 94". A dealer piece (Enliven) — fairly priced and in budget, just without a named priority maker.</p>
-      <p class="meta"><b>Maker/origin:</b> Danish (unbranded), via Enliven · listed in San Francisco<br>
-      <b>Size:</b> 53" → 94" extended on matching-teak draw-leaves (seats 8) · 33" deep<br>
-      <b>Base:</b> four tapered legs — <b>confirmed in listing photo this run</b> · <b>Condition:</b> used – good, recently refinished</p>
-      <div class="flag">✓ Clears every rule: Danish teak, matching-wood draw-leaves, four legs (not pedestal/trestle) confirmed in the hero photo, extends past 84", in budget, and active (listed ~12 hours ago on Facebook).</div>
-      <a class="btn" href="https://www.facebook.com/marketplace/item/1319262477065144/" target="_blank" rel="noopener">View listing →</a>
+    <div class="alert">
+      <h2>⚡ Chairs — quick read</h2>
+      <ul>
+        <li><b>Easiest win:</b> the <b>Set of 8 Danish teak, $1,600</b> (San Rafael) is already in a clean light woven fabric, comes with <b>free Bay Area delivery</b>, and gives you 6 + 2 spares. Best fit for "6 in an easy clean fabric."</li>
+        <li><b>Best match to the table:</b> the <b>Set of 6 D-Scan teak, $1,200</b> (Novato) is the same D-Scan line as the chairs that come with the Ansager table — buy both and you'd have a coordinated set of 10. Fabric is worn, so plan to recover the drop-in seats in an easy-clean fabric (a quick DIY).</li>
+      </ul>
     </div>
-  </div>
 
-  <div class="note">
-    <b>Seen this run but ruled out:</b> Lauritz M. Larsen teak ($1,500, SF) — extends to 105" but sits on a <b>trestle base</b> (a no). A Stuff by Luxe oval ($1,995, SF) — extends to 101" but on a <b>twin pedestal base</b> (a no). Mid-century teak Mobler sets w/ chairs ($1,500, San Jose) and a Danish teak table ($700, Sacramento) — both only ~67" extended, too small. A McIntosh of Kirkcaldy butterfly-leaf table ($1,850, SF) — <b>UK import</b>, and 81" max. A $900 MM Moreddi round table (Martinez) — extends to 87" but marked <b>Pending</b>. Round/conference-style pieces and several priority-maker tables ($2,200–$3,450) — over budget or wrong base.
+    <p class="criteria">Budget $1,200–$2,400 for six · MCM teak/walnut that coordinates with the table · easy, clean fabric · driveable / delivers</p>
+    <h2 class="section">Chairs · sets of 6+ · in budget</h2>
+
+    <div class="card">
+      <img class="photo" src="img/chairs8.jpg" alt="Set of 8 Danish modern teak dining chairs in light woven fabric">
+      <div class="body">
+        <span class="rank">🥇 Top pick</span>
+        <h3>Set of 8 Danish Modern Teak Dining Chairs — Free Bay Area Delivery</h3>
+        <div class="price">$1,600 <span style="font-size:13px;color:var(--muted);font-weight:600">(set of 8)</span></div>
+        <div class="stars">★★★★½<span class="num">4.5 / 5 value</span></div>
+        <p class="rateby">Eight solid teak chairs (incl. 2 captains) already in a clean light woven fabric, ~$200/chair, and free delivery. Covers six with spares — the lowest-hassle path to a clean-fabric set.</p>
+        <p class="meta"><b>Maker/origin:</b> Danish modern teak (unbranded) · San Rafael<br>
+        <b>Count/fabric:</b> 8 chairs (6 side + 2 arm) · light neutral woven seats &amp; backs — clean, easy<br>
+        <b>Condition:</b> used – good; teak frames rock-solid, 2 side chairs have worn fabric (others great) · <b>free Bay Area delivery</b></p>
+        <div class="flag">✓ MCM teak, set of 8 (covers 6), clean neutral fabric, in budget, and delivers free — no driving. Recover the 2 worn seats if you want them perfect.</div>
+        <a class="btn" href="https://www.facebook.com/marketplace/item/27398525349773474/" target="_blank" rel="noopener">View listing →</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <img class="photo" src="img/chairs6dscan.jpg" alt="Set of 6 D-Scan teak dining chairs, original fabric">
+      <div class="body">
+        <span class="rank value">💚 Best match to the table</span>
+        <h3>Set of 6 D-Scan Teak Dining Chairs</h3>
+        <div class="price">$1,200 <span style="font-size:13px;color:var(--muted);font-weight:600">(set of 6, as-is)</span></div>
+        <div class="stars">★★★★<span class="num">4 / 5 value</span></div>
+        <p class="rateby">Exactly six, and the same D-Scan line as the chairs that come with the Ansager table — so the two together read as one coordinated set. Fabric is tired, so budget a recover.</p>
+        <p class="meta"><b>Maker/origin:</b> D-Scan teak (Scandinavian-style) · Novato<br>
+        <b>Count/fabric:</b> 6 chairs · original upholstery, worn — drop-in seats are easy to recover in a wipeable/easy-clean fabric<br>
+        <b>Condition:</b> used – fair (frames solid); seller also offers a reupholstered option for more · in stock</p>
+        <div class="flag warn">⚠ Great match and price, but the fabric is worn — factor in ~$25–50/seat to recover the drop-in seats (or take the seller's reupholstered option) to get the clean look you want.</div>
+        <a class="btn" href="https://www.facebook.com/marketplace/item/1013697647729417/" target="_blank" rel="noopener">View listing →</a>
+      </div>
+    </div>
+
+    <div class="note">
+      <b>Seen but set aside:</b> Johannes Andersen teak 6 ($2,650) and a reupholstered Danish 6 ($3,600) — over the $2,400 ceiling. A Nathan teak 6 ($1,280, SF) — <b>UK import</b>. A floral-upholstered 6 ($2,400) — busy fabric, not the clean look you asked for.
+    </div>
   </div>
 
   <footer>
-    Auto-updated daily by Claude for Ray's 461 Anderson renovation.<br>
-    Craigslist photos are pulled live from the source; Facebook photos are self-hosted in this repo (their original links expire).
+    Auto-updated by Claude for Ray's 461 Anderson renovation.<br>
+    Listing photos are self-hosted in this repo and refreshed each run (Facebook's own image links expire).
   </footer>
 </div>
+<script>
+  document.querySelectorAll('.tab').forEach(function(t){
+    t.addEventListener('click', function(){
+      document.querySelectorAll('.tab').forEach(function(x){x.classList.remove('active')});
+      document.querySelectorAll('.pane').forEach(function(p){p.classList.remove('active')});
+      t.classList.add('active');
+      document.getElementById(t.dataset.pane).classList.add('active');
+    });
+  });
+</script>
 </body>
 </html>
