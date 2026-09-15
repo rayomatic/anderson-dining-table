@@ -1,0 +1,33 @@
+name: assemble-evening-board
+on:
+  push:
+    paths:
+      - '_publish/**'
+      - '.github/workflows/assemble-evening-board.yml'
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode and write index.html
+        run: |
+          python3 - <<'PY'
+          import base64, pathlib
+          parts=[]
+          for i in range(8):
+              b=pathlib.Path(f'_publish/{i}.b64').read_text().strip()
+              parts.append(base64.b64decode(b))
+          data=b''.join(parts)
+          pathlib.Path('index.html').write_bytes(data)
+          print('wrote', len(data))
+          PY
+      - name: Commit index.html
+        run: |
+          git config user.name "rayomatic"
+          git config user.email "rayomatic@gmail.com"
+          git add index.html
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "Mon evening board: North Beach $800 + Alameda $685 sold; San Leandro #1"
+          git push
