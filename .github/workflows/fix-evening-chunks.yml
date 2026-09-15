@@ -1,0 +1,38 @@
+name: fix-evening-chunks
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/fix-evening-chunks.yml'
+jobs:
+  fix:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Patch single-byte corruptions in chunks 0,3,6
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          fixes = {0: (6262, '4'), 3: (10313, 'G'), 6: (9853, '2')}
+          for i, (pos, ch) in fixes.items():
+              p = Path(f'_publish/{i}.b64')
+              s = list(p.read_text())
+              print(i, 'was', s[pos], '->', ch)
+              s[pos] = ch
+              p.write_text(''.join(s))
+          import base64
+          parts = [Path(f'_publish/{i}.b64').read_text().strip() for i in range(8)]
+          data = b''.join(base64.b64decode(p) for p in parts)
+          Path('index.html').write_bytes(data)
+          print('wrote index.html', len(data))
+          PY
+      - name: Commit fixed chunks and index.html
+        run: |
+          git config user.name "rayomatic"
+          git config user.email "rayomatic@gmail.com"
+          git add _publish/0.b64 _publish/3.b64 _publish/6.b64 index.html
+          git diff --cached --quiet && echo nochange && exit 0
+          git commit -m "Mon evening board: North Beach \$800 + Alameda \$685 sold; San Leandro #1"
+          git push
